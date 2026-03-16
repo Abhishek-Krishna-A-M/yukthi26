@@ -29,17 +29,19 @@
 html {
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  /* ⚠️ Do NOT set overflow-x: hidden here — combined with body it kills iOS scroll */
+  height: 100%;
 }
 body {
   background: var(--bg); color: var(--text);
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100svh;
-  overscroll-behavior: none;
-  overflow-x: hidden;
+  overscroll-behavior-x: none; /* only block horizontal overscroll, not vertical */
+  overflow-x: clip; /* safer than hidden — doesn't create a scroll container */
   /* Prevent layout shifts from scrollbar */
   width: 100%;
+  -webkit-overflow-scrolling: touch; /* smooth momentum scroll on iOS */
 }
 h1,h2,h3,h4,h5,h6 { font-family:'Syne',sans-serif; }
 
