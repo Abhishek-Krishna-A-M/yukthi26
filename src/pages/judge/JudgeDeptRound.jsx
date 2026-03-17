@@ -28,7 +28,14 @@ function ScoreCriterion({ label, description, value, onChange, max = 10, locked 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginBottom: 8 }}>
         <div style={{ minWidth: 0 }}>
           <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{label}</div>
-          <div style={{ fontSize: 11, color: 'var(--text-3)', marginTop: 1 }}>{description}</div>
+<div style={{ 
+  fontSize: 11, 
+  color: 'var(--text-3)', 
+  marginTop: 1, 
+  whiteSpace: 'pre-line' // This is the magic line
+}}>
+  {description}
+</div>
         </div>
         {/* Inline number input — the "type it" method */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>

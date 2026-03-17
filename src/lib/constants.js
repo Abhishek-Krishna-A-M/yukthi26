@@ -21,12 +21,37 @@ export const MAX_NOMINEES = {
 
 // 5 criteria × 10 pts = 50 per judge (dept round)
 export const SCORE_CRITERIA = [
-  { key: 'relevance',    label: 'Relevance',    description: 'Relevance to domain',          max: 10 },
-  { key: 'innovation',   label: 'Innovation',   description: 'Novelty & creativity',          max: 10 },
-  { key: 'methodology',  label: 'Methodology',  description: 'Technical soundness',           max: 10 },
-  { key: 'presentation', label: 'Presentation', description: 'Clarity & communication',       max: 10 },
-  { key: 'executable',   label: 'Executable',   description: 'Feasibility & implementation',  max: 10 },
-]
+  {
+    key: 'relevance',
+    label: 'Relevance',
+    description: 'Societal and/or industrial needs\n1-3: Low/Trivial\n4-6: Common/Low-priority\n7-8: Specific/Focused\n9-10: High impact/Scalable.',
+    max: 10
+  },
+  {
+    key: 'innovation',
+    label: 'Innovation',
+    description: 'Novelty & creativity\n1-3: Replicates existing\n4-6: Minor innovation\n7-8: Fresh perspective/Fairly novel\n9-10: Groundbreaking/Disruptive.',
+    max: 10
+  },
+  {
+    key: 'methodology',
+    label: 'Methodology',
+    description: 'Technical soundness\n1-3: Unclear/Minimal\n4-6: Basic/Moderate depth\n7-8: Well-defined/Effective\n9-10: Sophisticated/Optimized/Scalable.',
+    max: 10
+  },
+  {
+    key: 'presentation',
+    label: 'Presentation',
+    description: 'Clarity & communication\n1-3: Disorganized\n4-6: Average/Lacks engaging delivery\n7-8: Clear/Structured\n9-10: Professional/Exceptional.',
+    max: 10
+  },
+  {
+    key: 'executable',
+    label: 'Executable',
+    description: 'Feasibility & implementation\n1-3: Not executable/Impractical\n4-6: Partial prototype\n7-8: Functional/Realistic\n9-10: Polished/Ready for deployment.',
+    max: 10
+  },
+];
 
 export const SCORE_MAX_TOTAL = 50   // per judge, dept round
 export const FINAL_SCORE_MAX = 50   // per external judge, final round
