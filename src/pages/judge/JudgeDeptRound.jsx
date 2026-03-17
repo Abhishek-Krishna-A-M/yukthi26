@@ -28,13 +28,15 @@ function ScoreCriterion({ label, description, value, onChange, max = 10, locked 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginBottom: 8 }}>
         <div style={{ minWidth: 0 }}>
           <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{label}</div>
-<div style={{ 
-  fontSize: 11, 
-  color: 'var(--text-3)', 
-  marginTop: 1, 
-  whiteSpace: 'pre-line' // This is the magic line
-}}>
-  {description}
+<div style={{ fontSize: 11, whiteSpace: 'pre-line', color: 'var(--text-3)' }}>
+  {description.split('\n').map((line, i) => {
+    const parts = line.split(':');
+    return parts.length > 1 ? (
+      <div key={i}><strong>{parts[0]}:</strong>{parts[1]}</div>
+    ) : (
+      <div key={i} style={{ fontWeight: 'bold', marginBottom: 2 }}>{line}</div>
+    );
+  })}
 </div>
         </div>
         {/* Inline number input — the "type it" method */}
