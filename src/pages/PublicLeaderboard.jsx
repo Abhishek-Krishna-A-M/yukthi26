@@ -165,7 +165,7 @@ export default function PublicLeaderboard() {
                     <div key={t.id} style={{ flex:1, maxWidth:220, display:'flex', flexDirection:'column', alignItems:'center', gap:0 }}>
                       <div style={{ textAlign:'center', marginBottom:8, padding:'0 8px' }}>
                         <div style={{ fontSize:isMobile?12:14, fontWeight:700, color:'var(--text)', marginBottom:3, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', maxWidth:'100%' }}>
-                          {t.project_title}
+                          {t.registration_number}
                         </div>
                         <div style={{ display:'flex', gap:5, justifyContent:'center', flexWrap:'wrap' }}>
                           <DeptBadge dept={t.department}/>
